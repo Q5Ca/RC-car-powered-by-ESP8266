@@ -1,0 +1,88 @@
+<html>
+	<head>
+	<script src="/js/js_funcs.js"></script>
+	<link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
+	<style type="text/css">
+		#div_nut_vao_xe {
+			position: absolute;
+			left: 680px;
+			top: 475px;
+			z-index: 1;
+		}
+		#div_nut_vao_xe p {
+			position: relative;
+			bottom: 35px;
+			text-align: center;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-weight: bold;
+			font-size: 30px;
+			z-index: 2;
+			color: blue;
+			
+		}
+		.nut_dieu_khien {
+			background-color: Transparent;
+			background-repeat:no-repeat;
+			border: none;
+			cursor:pointer;
+			overflow: hidden;
+			outline:none;
+		}
+		
+		
+		
+		#banner {
+			position: absolute;
+			top: 15px;
+			left: 100px;
+			z-index: 2;
+			width: 1000px;
+		}
+
+		#banner text {
+			fill: url(#p-fire);
+			stroke: #330000;
+			stroke-width: 8;
+			stroke-opacity: .5;
+			font: 80px Open Sans, Impact;
+			letter-spacing: 8px;
+		}
+		#banner p {
+			color: orange;
+			margin-top: 0px;
+			margin-bottom: 20px;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			font-size: 110px;
+			text-align: center;
+		}
+		
+		</style>
+	</head>
+	
+	<body>
+			
+		<img id="back_ground" src="/images/bg_cua.jpg" alt="background">
+		<!--<p id="banner">WELCOME TO CONTROL CAR</p>-->
+		<div id="div_nut_vao_xe">
+			<button class="nut_dieu_khien" onclick="vao_xe()"><img src="/images/cua.png" alt="Vào xe"></button>
+			<p>Vào xe</p>
+		</div>
+		
+		<div id="banner">
+			<p>WELCOME TO</p>
+			<svg viewBox="0 0 550 100">
+
+				<!-- Pattern -->
+				<pattern  id="p-fire"  viewBox="30 100 186 200" patternUnits="userSpaceOnUse" width="216" height="200" x="-70" y="35">
+
+					<!-- Fire -->
+					<image xlink:href="/images/fire.gif" width="256" height="300"/>
+				</pattern>
+
+				<!-- Text -->
+				<text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text">CONTROL CAR</text>
+
+			</svg>
+		</div>
+	</body>
+</html>
