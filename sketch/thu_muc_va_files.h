@@ -7,7 +7,7 @@
 
 extern ESP8266WebServer server;
 
-#ifdef DEBUG
+#if DEBUG == 1
 void hien_cac_file() {  
   Dir dir = SPIFFS.openDir("/");
   while (dir.next()) {
@@ -35,32 +35,32 @@ String getContentType(String filename){
 }
 
 bool handleFileRead (String path) {
-  #ifdef DEBUG
+  #if DEBUG == 1
   Serial.print("handle file read: " + path + " ... ");
   #endif
   if (SPIFFS.exists(path)) {
     File file = SPIFFS.open(path, "r");
-    #ifdef DEBUG
+    #if DEBUG == 1
     Serial.print("Da mo file; ");
     #endif
     
     server.streamFile (file, getContentType(path));
-    #ifdef DEBUG
+    #if DEBUG == 1
     Serial.print("Da stream file; ");
     #endif
     
     file.close();
-    #ifdef DEBUG
+    #if DEBUG == 1
     Serial.print("Da dong file; ");
     #endif
     
-    #ifdef DEBUG
+    #if DEBUG == 1
     Serial.println("done");
     #endif
     
     return true;
   }
-  #ifdef DEBUG
+  #if DEBUG == 1
   Serial.println("file not found");
   #endif
   return false;

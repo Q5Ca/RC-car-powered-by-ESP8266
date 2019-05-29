@@ -32,9 +32,14 @@ function ra_khoi_xe() {
 		document.write(xhr.response);
 	};
 	xhr.send('cua=ra');
+	window.onbeforeunload = function(){
+		return ;
+	};
+	window.onunload = function() {
+		return;
+	};
+	connection.close();
 }
 
-function dieu_khien(huong) {
-	guiGET("/handle_control?dieu_khien="+huong);
-}
+
 
